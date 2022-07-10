@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --main-color: rgba(34, 30, 31, 255);
+  --secondary-color: #fcfcfc;
+  --third-color: #8c848c;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-color);
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5% auto;
+}
+
+.timing-score {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 680px;
+  color: var(--third-color);
+  margin: 10px auto;
+}
+
+.timing-score h3 span {
+  color: var(--secondary-color);
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 680px;
+  height: 680px;
+  border: 3px solid var(--secondary-color);
+  border-radius: 10px;
+}
+
+.grid div {
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  border: 3px solid var(--secondary-color);
+}
+
+.grid div:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.header {
+  color: var(--third-color);
+  margin: 0px auto 40px;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.mole {
+  background-color: #8c848c;
+  background-image: url("images/mole.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 762px) {
+  .grid div {
+    width: 85px;
+    height: 85px;
+  }
+  .grid {
+    width: 340px;
+    height: 340px;
+  }
+  .timing-score {
+    width: 340px;
+  }
+}
